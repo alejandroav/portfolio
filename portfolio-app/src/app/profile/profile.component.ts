@@ -8,7 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class ProfileComponent implements OnInit {
 
-  private profileItems = [{
+  profileItems = [{
     link: 'https://www.linkedin.com/in/alejandroalarcon/',
     title: 'LinkedIn',
     text: 'LinkedIn',
