@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="1a680aa44c56d6a15dc9731f8b4b8228b103a9cf" datatype="html">
+        <source>I&apos;m a full stack web developer from Alicante, Spain.</source>
+        <target>Soy un desarrollador web de Alicante.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/profile/profile.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Introduction</note>
+      </trans-unit>
+      <trans-unit id="34a1fa645aac65f6767e920e6d964e0eb714dce3" datatype="html">
+        <source>You can find me at:</source>
+        <target>Puedes encontrarme a través de:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/profile/profile.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Contact links text</note>
+      </trans-unit>
+      <trans-unit id="3f443bd7a969f3a300b7cd2ed328bd51f803f249" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{item.text}}"/></source>
+        <target><x id="INTERPOLATION" equiv-text="{{item.text_es}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/profile/profile.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="62a50fe22287bc1feac08e30878cb492f907bb7e" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{item.title}}"/></source>
+        <target><x id="INTERPOLATION" equiv-text="{{item.title_es}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/profile/profile.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="40526b486d10e7c05bad59e0699ff4fedc914300" datatype="html">
+        <source>Skills &amp; Technologies</source>
+        <target>Tecnologías</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/skills/skills.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+	background-color: #333 ;
+	color: white;
+	font-size: 24px;
+	/* font-family: 'Rajdhani', sans-serif; */
+}
+
+a:link, a:visited, a:hover, a:active {
+	color: white;
+	text-align: center;
+	text-decoration: none;
+}
+
+p {
+	font-size: 1.2rem;
+}
+
+h1 {
+	/* font-family: 'Major Mono Display', monospace; */
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+h5 {
+	font-size: 1rem;
+}
+
+hr {
+	border-color: white;
+}
+
+i {
+	font-size: 2.6rem;
+}
+
+section {
+	min-height: 50vh;
+	margin: 25vh auto 0 auto;
+	max-width: 700px;
+	text-align: center;
+}
+
+ul {
+	margin: 25px !important;
+	border-radius: 25px;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
