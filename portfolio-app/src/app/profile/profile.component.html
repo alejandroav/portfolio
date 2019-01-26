@@ -1,13 +1,13 @@
 <section id="profile">
   <img class="img-responsive" src="assets/profile.png" alt="Profile pic" height="150px">
   <h1>Alejandro Alarcón</h1>
-  <p i18n="Introduction">I'm a full stack web developer from Alicante, Spain.</p>
-  <p i18n="Contact links text">You can find me at:</p>
+  <p>{{ 'profile.introduction' | translate }}</p>
+  <p>{{ 'profile.findMeAt' | translate}}</p>
 
   <ul class="row">
-    <li *ngFor="let item of profileItems" class="col-4"><a href="{{item.link}}" i18n-title title="{{item.title}}" target="_blank">
+    <li *ngFor="let item of profileItems" class="col-4"><a href="{{item.link}}" title="{{item.title}}" target="_blank">
       <i class="{{item.icon}}"></i>
-      <h5 i18n>{{item.text}}</h5>
+      <h5>{{item.text}}</h5>
     </a></li>
   </ul>
 

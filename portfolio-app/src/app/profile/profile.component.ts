@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-profile',
@@ -7,32 +8,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  profileItems = [{
+  private profileItems = [{
     link: 'https://www.linkedin.com/in/alejandroalarcon/',
     title: 'LinkedIn',
-    title_es: 'LinkedIn',
     text: 'LinkedIn',
-    text_es: 'LinkedIn',
     icon: 'fab fa-linkedin'
   }, {
     link: 'https://github.com/alejandroav',
     title: 'GitHub',
-    title_es: 'GitHub',
     text: 'GitHub',
-    text_es: 'GitHub',
     icon: 'devicon-github-plain'
   }, {
     link: 'https://www.visualcv.com/alejandro-alarcn/pdf/',
-    title: 'Download my resume',
-    title_es: 'Descarga mi currículum',
-    text: 'Resume',
-    text_es: 'Currículum',
+    title: null,
+    text: null,
     icon: 'fas fa-file'
   }];
 
-  constructor() { }
+  constructor(translate: TranslateService) {
+    translate.setDefaultLang('en');
+    translate.use(translate.getBrowserLang());
 
-  ngOnInit() {
+    translate.get('profile.cvTitle')
+      .subscribe((res: string) => {
+        this.profileItems[2].title = res;
+      });
+
+    translate.get('profile.cvText')
+      .subscribe((res: string) => {
+        this.profileItems[2].text = res;
+      });
   }
 
+  ngOnInit() {}
 }
