@@ -1,8 +1,8 @@
 <section id="profile">
-  <img class="img-responsive" src="assets/profile.png" alt="Profile pic" height="150px">
+  <img class="img-responsive" src="assets/images/profile.png" alt="Profile pic" height="150px">
   <h1>Alejandro Alarcón</h1>
-  <p>{{ 'profile.introduction' | translate }}</p>
-  <p>{{ 'profile.findMeAt' | translate}}</p>
+  <p>{{ 'profileSection.introduction' | translate }}<br>
+  {{ 'profileSection.findMeAt' | translate}}</p>
 
   <ul class="row">
     <li *ngFor="let item of profileItems" class="col-4"><a href="{{item.link}}" title="{{item.title}}" target="_blank">

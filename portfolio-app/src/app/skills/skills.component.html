@@ -1,73 +1,25 @@
 <section id="skills">
-  <h1>{{ 'skills.title' | translate }}</h1>
+  <h1>{{ 'skillsSection.title' | translate }}</h1>
   <hr>
 
-  <h3>Front End</h3>
-  <ul class="row justify-content-center">
-    <li class="col-6 col-sm-4">
-      <i class="devicon-html5-plain"></i>
-      <h5>HTML 5</h5>
-    </li>
-    <li class="col-6 col-sm-4">
-      <i class="devicon-css3-plain"></i>
-      <h5>CSS 3</h5>
-    </li>
-    <li class="col-6 col-sm-4">
-      <i class="devicon-javascript-plain"></i>
-      <h5>JavaScript</h5>
-    </li>
-    <li class="col-6 col-sm-4">
-      <i class="devicon-bootstrap-plain"></i>
-      <h5>Bootstrap 4</h5>
-    </li>
-    <li class="col-6 col-sm-4">
-      <i class="devicon-angularjs-plain"></i>
-      <h5>Angular 2+</h5>
-    </li>
-    <li class="col-6 col-sm-4">
-      <i class="devicon-jquery-plain"></i>
-      <h5>jQuery</h5>
-    </li>
-  </ul>
+  <div class="skillset">
+    <h3>Front End</h3>
+    <ul class="row justify-content-center">
+      <li *ngFor="let item of frontEndSkills" class="col-6 col-sm-4">
+        <i class="{{ item.icon }}"></i>
+        <h5>{{ item.name }}</h5>
+      </li>
+    </ul>
+  </div>
 
-  <h3>Back End</h3>
-  <ul class="row justify-content-center">
-    <li class="col-6 col-sm-4">
-      <i class="devicon-javascript-plain"></i>
-      <h5>JavaScript</h5>
-    </li>
-    <li class="col-6 col-sm-4">
-      <i class="devicon-php-plain"></i>
-      <h5>PHP</h5>
-    </li>
-    <li class="col-6 col-sm-4">
-      <i class="devicon-java-plain"></i>
-      <h5>Java</h5>
-    </li>
-    <li class="col-6 col-sm-4">
-      <i class="devicon-nodejs-plain"></i>
-      <h5>Node.js</h5>
-    </li>
-    <li class="col-6 col-sm-4">
-      <i class="devicon-express-original"></i>
-      <h5>Express</h5>
-    </li>
-    <li class="col-6 col-sm-4">
-      <i class="devicon-wordpress-plain"></i>
-      <h5>WordPress</h5>
-    </li>
-    <li class="col-6 col-sm-4">
-      <i class="devicon-mysql-plain"></i>
-      <h5>MySQL</h5>
-    </li>
-    <li class="col-6 col-sm-4">
-      <i class="devicon-oracle-original"></i>
-      <h5>Oracle DB</h5>
-    </li>
-    <li class="col-6 col-sm-4">
-      <i class="devicon-mongodb-plain"></i>
-      <h5>MongoDB</h5>
-    </li>
-  </ul>
+  <div class="skillset">
+    <h3>Back End</h3>
+    <ul class="row justify-content-center">
+      <li *ngFor="let item of backEndSkills" class="col-6 col-sm-4">
+        <i class="{{ item.icon }}"></i>
+        <h5>{{ item.name }}</h5>
+      </li>
+    </ul>
+  </div>
 
 </section>

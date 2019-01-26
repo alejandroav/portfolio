@@ -3,3 +3,10 @@ li {
 	font-size: 18px;
 	margin: 25px 0px 25px 0px;
 }
+
+.skillset {
+  border: 1px solid white;
+  padding: 25px;
+  margin: 25px;
+  border-radius: 25px;
+}

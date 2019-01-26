@@ -6,7 +6,7 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent {
 
   profileItems = [{
     link: 'https://www.linkedin.com/in/alejandroalarcon/',
@@ -26,19 +26,10 @@ export class ProfileComponent implements OnInit {
   }];
 
   constructor(translate: TranslateService) {
-    translate.setDefaultLang('en');
-    translate.use(translate.getBrowserLang());
-
-    translate.get('profile.cvTitle')
-      .subscribe((res: string) => {
-        this.profileItems[2].title = res;
-      });
-
-    translate.get('profile.cvText')
-      .subscribe((res: string) => {
-        this.profileItems[2].text = res;
+    translate.get('profileSection')
+      .subscribe((res) => {
+        this.profileItems[2].title = res.cvTitle;
+        this.profileItems[2].text = res.cvText;
       });
   }
-
-  ngOnInit() {}
 }

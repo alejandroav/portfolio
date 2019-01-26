@@ -6,14 +6,54 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css']
 })
-export class SkillsComponent implements OnInit {
+export class SkillsComponent {
 
-  constructor(translate: TranslateService) {
-    translate.setDefaultLang('en');
-    translate.use(translate.getBrowserLang());
-  }
+  frontEndSkills = [{
+    name: 'HTML 5',
+    icon: 'devicon-html5-plain',
+  }, {
+    name: 'CSS 3',
+    icon: 'devicon-css3-plain',
+  }, {
+    name: 'JavaScript',
+    icon: 'devicon-javascript-plain',
+  }, {
+    name: 'Bootstrap 4',
+    icon: 'devicon-bootstrap-plain',
+  }, {
+    name: 'Angular 2+',
+    icon: 'devicon-angularjs-plain',
+  }, {
+    name: 'jQuery',
+    icon: 'devicon-jquery-plain',
+  }];
 
-  ngOnInit() {
-  }
-
+  backEndSkills = [{
+    name: 'JavaScript',
+    icon: 'devicon-javascript-plain',
+  }, {
+    name: 'PHP',
+    icon: 'devicon-php-plain',
+  }, {
+    name: 'Java',
+    icon: 'devicon-java-plain',
+  }, {
+    name: 'Node.js',
+    icon: 'devicon-nodejs-plain',
+  }, {
+    icon: 'devicon-express-original',
+    name: 'Express',
+  }, {
+    icon: 'devicon-wordpress-plain',
+    name: 'WordPress',
+  }, {
+    icon: 'devicon-mysql-plain',
+    name: 'MySQL',
+  }, {
+    name: 'Oracle DB',
+    icon: 'devicon-oracle-original',
+  }, {
+    name: 'MongoDB',
+    icon: 'devicon-mongodb-plain',
+  }];
 }
