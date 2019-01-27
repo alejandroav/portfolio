@@ -9,27 +9,39 @@ import { TranslateService } from '@ngx-translate/core';
 export class ProfileComponent {
 
   profileItems = [{
+    link: 'mailto:alejandroalarcon93@gmail.com',
+    title: null,
+    text: null,
+    icon: 'fas fa-envelope',
+    target: '_self'
+  }, {
     link: 'https://www.linkedin.com/in/alejandroalarcon/',
     title: 'LinkedIn',
     text: 'LinkedIn',
-    icon: 'fab fa-linkedin'
+    icon: 'fab fa-linkedin',
+    target: '_blank'
   }, {
     link: 'https://github.com/alejandroav',
     title: 'GitHub',
     text: 'GitHub',
-    icon: 'devicon-github-plain'
+    icon: 'devicon-github-plain',
+    target: '_blank'
   }, {
     link: 'https://www.visualcv.com/alejandro-alarcn/pdf/',
     title: null,
     text: null,
-    icon: 'fas fa-file'
+    icon: 'fas fa-file',
+    target: '_blank'
   }];
 
   constructor(translate: TranslateService) {
     translate.get('profileSection')
       .subscribe((res) => {
-        this.profileItems[2].title = res.cvTitle;
-        this.profileItems[2].text = res.cvText;
+        this.profileItems[0].title = res.emailTitle;
+        this.profileItems[0].text = res.emailText;
+
+        this.profileItems[3].title = res.cvTitle;
+        this.profileItems[3].text = res.cvText;
       });
   }
 }

@@ -4,17 +4,18 @@
 
 img {
   height: 75vh;
-  -webkit-filter: blur(4px);
-  filter: blur(4px);
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
   object-fit: cover;
   object-position: 50% 0%;
 }
 
-h5 {
-  font-size: 2rem;
+.carousel-caption {
+  background-color: #009ccfcc;
+  border-radius: 25px;
+  padding: 25px;
 }
 
-.carousel-caption {
-  background-color: #3335;
-  border-radius: 20px;
+.carousel-caption a {
+  color: white;
 }

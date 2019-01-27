@@ -18,10 +18,10 @@ export class SkillsComponent {
     name: 'JavaScript',
     icon: 'devicon-javascript-plain',
   }, {
-    name: 'Bootstrap 4',
+    name: 'Bootstrap',
     icon: 'devicon-bootstrap-plain',
   }, {
-    name: 'Angular 2+',
+    name: 'Angular',
     icon: 'devicon-angularjs-plain',
   }, {
     name: 'jQuery',

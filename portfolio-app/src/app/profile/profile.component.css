@@ -1,11 +1,35 @@
 img {
-	border-radius: 25px;
+	border-radius: 50px;
 }
 
 h1 {
-	margin: 20px 0 20px 0;
+	margin: 20px 0 0 0;
 }
 
 section {
-  max-width: 500px;
+  max-width: 50vh;
+  background-color: #009ccf;
+  color: white;
+  padding: 25px 0 0 0;
+  border-radius: 25px;
+}
+
+ul {
+  max-width: 75vh;
+	border-radius: 0 0 24px 24px;
+	list-style: none;
+  background-color: #ffffff;
+  margin: auto;
+  padding: 0 !important;
+}
+
+ul a {
+  color: #53565a;
+}
+
+@media only screen and (max-width: 577px) {
+  section {
+    margin-top: 5vh;
+    font-size: 16px;
+  }
 }
