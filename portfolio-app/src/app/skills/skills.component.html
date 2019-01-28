@@ -2,24 +2,28 @@
   <h1>{{ 'skillsSection.title' | translate }}</h1>
   <hr>
 
-  <div class="skillset">
-    <h3>Front End</h3>
-    <ul class="row justify-content-center">
-      <li *ngFor="let item of frontEndSkills" class="col-6 col-sm-4">
-        <i class="{{ item.icon }}"></i>
-        <h5>{{ item.name }}</h5>
-      </li>
-    </ul>
-  </div>
+  <div class="row justify-content-around">
 
-  <div class="skillset">
-    <h3>Back End</h3>
-    <ul class="row justify-content-center">
-      <li *ngFor="let item of backEndSkills" class="col-6 col-sm-4">
-        <i class="{{ item.icon }}"></i>
-        <h5>{{ item.name }}</h5>
-      </li>
-    </ul>
+    <div class="col-12 col-md-5 skillset">
+      <h3>Front End</h3>
+      <ul class="row justify-content-center align-items-center">
+        <li *ngFor="let item of frontEndSkills" class="col-6 col-sm-4">
+          <i class="{{ item.icon }}"></i>
+          <h5>{{ item.name }}</h5>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-12 col-md-5 skillset">
+      <h3>Back End</h3>
+      <ul class="row justify-content-center align-items-center">
+        <li *ngFor="let item of backEndSkills" class="col-6 col-sm-4">
+          <i class="{{ item.icon }}"></i>
+          <h5>{{ item.name }}</h5>
+        </li>
+      </ul>
+    </div>
+
   </div>
 
 </section>
