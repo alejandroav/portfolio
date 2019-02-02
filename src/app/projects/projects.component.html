@@ -8,7 +8,7 @@
     </ol>
     <div class="carousel-inner">
       <div *ngFor="let item of projects; let i = index" class="carousel-item" [ngClass]="{'active': i == 0}">
-        <a href="{{ item.link }}" title="{{ item.name }}" target="_blank">
+        <a href="{{ item.link }}" title="{{ item.name }}" target="_blank" angulartics2On="click" angularticsAction="LinkClick">
           <img class="d-block w-100" src="assets/images/{{ item.image }}" alt="{{ item.name }}">
           <div class="carousel-caption d-block">
             <h2>{{ item.name }}</h2>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -9,39 +9,38 @@ import { TranslateService } from '@ngx-translate/core';
 export class ProfileComponent {
 
   profileItems = [{
-    link: 'mailto:alejandroalarcon93@gmail.com',
     title: null,
     text: null,
+    link: 'mailto:alejandroalarcon93@gmail.com',
     icon: 'fas fa-envelope',
     target: '_self'
   }, {
+    title: null,
+    text: null,
     link: 'https://www.linkedin.com/in/alejandroalarcon/',
-    title: 'LinkedIn',
-    text: 'LinkedIn',
     icon: 'fab fa-linkedin',
     target: '_blank'
   }, {
+    title: null,
+    text: null,
     link: 'https://github.com/alejandroav',
-    title: 'GitHub',
-    text: 'GitHub',
     icon: 'devicon-github-plain',
     target: '_blank'
   }, {
-    link: 'https://www.visualcv.com/alejandro-alarcn/pdf/',
     title: null,
     text: null,
+    link: 'https://www.visualcv.com/alejandro-alarcn/pdf/',
     icon: 'fas fa-file',
     target: '_blank'
   }];
 
   constructor(translate: TranslateService) {
-    translate.get('profileSection')
+    translate.get('profileSection.links')
       .subscribe((res) => {
-        this.profileItems[0].title = res.emailTitle;
-        this.profileItems[0].text = res.emailText;
-
-        this.profileItems[3].title = res.cvTitle;
-        this.profileItems[3].text = res.cvText;
+        this.profileItems.forEach((element, index) => {
+          element.title = res[index].title;
+          element.text = res[index].text;
+        });
       });
   }
 }
