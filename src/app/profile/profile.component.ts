@@ -13,7 +13,7 @@ export class ProfileComponent {
     text: null,
     link: 'mailto:alejandroalarcon93@gmail.com',
     icon: 'fas fa-envelope',
-    target: '_self'
+    target: '_blank'
   }, {
     title: null,
     text: null,
@@ -29,7 +29,7 @@ export class ProfileComponent {
   }, {
     title: null,
     text: null,
-    link: 'https://www.visualcv.com/alejandro-alarcn/pdf/',
+    link: null,
     icon: 'fas fa-file',
     target: '_blank'
   }];
@@ -38,8 +38,9 @@ export class ProfileComponent {
     translate.get('profileSection.links')
       .subscribe((res) => {
         this.profileItems.forEach((element, index) => {
-          element.title = res[index].title;
-          element.text = res[index].text;
+          element.title = res[index].title || element.title;
+          element.text = res[index].text || element.text;
+          element.link = res[index].link || element.link;
         });
       });
   }
